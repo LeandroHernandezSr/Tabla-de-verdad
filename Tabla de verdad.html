@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tabla de verdad</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Tabla de verdad</h1>
+<p class="sub">Escribí una expresión lógica y generá todas las combinaciones.</p>
+<div class="card">
+<input id="expr" value="[ (p v q’) ⇒ p’] ∧ q" spellcheck="false" autocomplete="off" aria-label="Expresión lógica">
+<div class="row" id="ops"></div>
+<div class="row"><button class="go" id="go">Generar tabla</button><button id="clear">Limpiar</button></div>
+<p class="lbl">Ejemplos</p>
+<div class="row" id="ex"></div>
+<div class="err" id="err"></div>
+</div>
+<div id="out"><div class="badge" id="badge"></div><div class="wrap"><table id="tbl"></table></div></div>
+<p class="hint">Operadores: NO <code>! ~ ¬ not</code> o prima <code>p’</code> · Y <code>&amp; ∧ and</code> · O <code>| ∨ or v</code> · XOR <code>^ ⊕ xor</code> · implica <code>-&gt; → ⇒</code> · si y sólo si <code>&lt;-&gt; ↔</code>. Agrupación: <code>( ) [ ]</code> y <code>{ }</code>. Constantes: <code>1</code>/<code>0</code>. Variables: letras (p, q, r, A, B…), hasta 8.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

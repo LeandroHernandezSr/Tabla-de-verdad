@@ -1,0 +1,214 @@
+:root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    --bg: #f6f5f1;
+    --card: #fff;
+    --fg: #1d1d1b;
+    --mut: #6b6a66;
+    --bd: #dcdad3;
+    --acc: #2f5d50;
+    --t: #d9efe3;
+    --tf: #1f6b4a;
+    --f: #f6dcdc;
+    --ff: #9a2f2f;
+    --res: #eef3ff
+}
+
+@media (prefers-color-scheme:dark) {
+    :root:not([data-theme="light"]) {
+        --bg: #171716;
+        --card: #222220;
+        --fg: #eeede8;
+        --mut: #9b9a94;
+        --bd: #3a3936;
+        --acc: #7fc4ae;
+        --t: #1d3b2f;
+        --tf: #8fe0b5;
+        --f: #44211f;
+        --ff: #f0a19c;
+        --res: #1f2838
+    }
+}
+
+:root[data-theme="dark"] {
+    --bg: #171716;
+    --card: #222220;
+    --fg: #eeede8;
+    --mut: #9b9a94;
+    --bd: #3a3936;
+    --acc: #7fc4ae;
+    --t: #1d3b2f;
+    --tf: #8fe0b5;
+    --f: #44211f;
+    --ff: #f0a19c;
+    --res: #1f2838
+}
+
+html {
+    scroll-padding-top: env(safe-area-inset-top, 0px)
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif
+}
+
+main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 24px 16px 48px
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin: 0 0 4px
+}
+
+.sub {
+    color: var(--mut);
+    margin: 0 0 20px
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--bd);
+    border-radius: 14px;
+    padding: 16px
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    font: 1.15rem ui-monospace, Menlo, Consolas, monospace;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--bd);
+    background: var(--bg);
+    color: var(--fg)
+}
+
+input:focus {
+    outline: 2px solid var(--acc);
+    border-color: transparent
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    border: 1px solid var(--bd);
+    background: var(--card);
+    color: var(--fg);
+    border-radius: 8px;
+    padding: 6px 12px
+}
+
+button:hover {
+    border-color: var(--acc)
+}
+
+.op {
+    font-size: 1.1rem;
+    min-width: 40px
+}
+
+.go {
+    background: var(--acc);
+    color: var(--bg);
+    border-color: var(--acc);
+    font-weight: 600
+}
+
+.lbl {
+    font-size: .8rem;
+    color: var(--mut);
+    margin: 14px 0 0;
+    text-transform: uppercase;
+    letter-spacing: .05em
+}
+
+.err {
+    color: var(--ff);
+    margin-top: 12px;
+    display: none
+}
+
+#out {
+    margin-top: 20px;
+    display: none
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    background: var(--res);
+    margin-bottom: 12px
+}
+
+.wrap {
+    overflow-x: auto;
+    border: 1px solid var(--bd);
+    border-radius: 12px;
+    background: var(--card)
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    text-align: center
+}
+
+th,
+td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--bd);
+    white-space: nowrap
+}
+
+th {
+    font-weight: 600;
+    background: var(--bg);
+    position: sticky;
+    top: 0
+}
+
+th.res,
+td.res {
+    border-left: 2px solid var(--acc)
+}
+
+td.T {
+    background: var(--t);
+    color: var(--tf)
+}
+
+td.F {
+    background: var(--f);
+    color: var(--ff)
+}
+
+td.v {
+    color: var(--mut)
+}
+
+tr:last-child td {
+    border-bottom: 0
+}
+
+.hint {
+    font-size: .85rem;
+    color: var(--mut);
+    margin-top: 16px
+}
